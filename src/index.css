@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background-color: #385170;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #e4e4e4;
+}
+.slide-item{
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+}
+.off{
+    display: none;
+}
+.slideCard{
+    width: 200px;
+    height: 250px;
+    border-radius: 6px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.slideCard:hover{
+    transform: translateY(-2px);
+}
+.bestCard{
+    cursor: grab;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bestCard p{
+    margin: 16px;
+}
