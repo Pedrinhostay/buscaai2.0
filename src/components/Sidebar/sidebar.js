@@ -5,7 +5,7 @@ export const Aside = styled.aside`
   z-index: 1000;
   top: 0px;
   right: 0px;
-  width: 15%;
+  width: 24%;
   height: 100%;
   padding: 1rem;
   font-family: 'Poppins', sans-serif;
@@ -20,5 +20,9 @@ export const Aside = styled.aside`
     text-decoration: none;
     color: #000;
     font-size: 1.4rem;
+  }
+  div{
+    flex-grow: 1;
+  overflow: auto;
   }
 `

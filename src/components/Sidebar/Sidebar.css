@@ -1,0 +1,15 @@
+
+.cartHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cartHeader a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4rem;
+}
+.cartItems{
+    flex-grow: 1;
+  overflow: auto;
+}

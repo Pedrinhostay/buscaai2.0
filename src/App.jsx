@@ -9,13 +9,14 @@ import Modal from './components/Modal/Modal.jsx';
 import SideBar from './components/Sidebar/Sidebar.jsx';
 import BestSeller from './components/Best/Best.jsx';
 import Products from './components/Products/Products.jsx';
+import Provider from './context/Provider.jsx';
 
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
   const [sideBar, setSideBar] = useState(false);
   return (
-    <>
+    <Provider>
     <Header setOpenModal={setOpenModal} setSideBar={setSideBar}/>
     <Nav/>
     <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
@@ -32,7 +33,7 @@ function App() {
     <Carousel/>
     <BestSeller/>
     <Products/>
-    </>
+    </Provider>
   )
 }
 

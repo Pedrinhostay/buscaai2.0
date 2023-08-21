@@ -1,7 +1,14 @@
-import { FaTimes } from "react-icons/fa"
-import * as S from "./sidebar.js"
-export default function SideBar({isOpen, children, setSideBarOpen}){
-    
+import { FaTimes } from "react-icons/fa";
+import * as S from "./sidebar.js";
+import propTypes from "prop-types";
+import SideCart from "../SideCart/SideCart.jsx";
+import { useContext } from "react";
+import AppContext from "../../context/AppContext.js";
+export default function SideBar({isOpen, setSideBarOpen}){
+
+    const {cartItems} = useContext(AppContext);
+
+
     if(isOpen){
         return (
             <S.Aside>
@@ -9,7 +16,7 @@ export default function SideBar({isOpen, children, setSideBarOpen}){
                     <h2>Carrinho</h2>
                     <a href=""><FaTimes onClick={() => setSideBarOpen }/></a>
                 </header>
-                <div>{children}</div>
+                <div>{cartItems.map((cartItem)=> <SideCart key={cartItem.id} data={cartItem}/>)}</div>
             </S.Aside>
         )
     }
@@ -17,3 +24,6 @@ export default function SideBar({isOpen, children, setSideBarOpen}){
 
     return null
 }
+SideBar.propTypes ={
+    children: propTypes.any,
+  }.isRequired;

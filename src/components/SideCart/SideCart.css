@@ -1,0 +1,33 @@
+.Cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.Cart img{
+    width: 70px;
+}
+.cartInfos{
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 40px 0px 20px;
+}
+.cartTitle{
+    font-size: 0.9rem;
+}
+.cartPrice{
+    font-size: 0.8rem;
+}
+.remove{
+    background: none;
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #d82323;
+    border: none;
+    top: 0;
+    right: 0;
+}

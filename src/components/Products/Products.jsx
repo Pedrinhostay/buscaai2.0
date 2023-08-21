@@ -1,17 +1,20 @@
-import { useState, useEffect } from "react"
+import {  useEffect, useContext } from "react"
+
 import fetchProducts from "../../api/fetchProducts"
-import Cards from "../Cards/Cards";
 import "./Products.css"
+import Cards from "../ProductsCards/Cards";
+import AppContext from "../../context/AppContext";
+
 export default function Products(){
-    const [products, setProducts] = useState([]);
+    
+    const {products, setProducts} =useContext(AppContext);
 
     useEffect( () => {
         fetchProducts('console').then((res) => {
-            setProducts(res)
+            setProducts(res);
         })
     }, [])
 
-    console.log(products)
     return(
         <>
             <h1 className="heading">Os melhores produtos</h1>
