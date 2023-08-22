@@ -10,6 +10,9 @@ import SideBar from './components/Sidebar/Sidebar.jsx';
 import BestSeller from './components/Best/Best.jsx';
 import Products from './components/Products/Products.jsx';
 import Provider from './context/Provider.jsx';
+import ModalForm from './components/ModalForm/ModalForm.jsx';
+import Infos from './components/Infos/Infos.jsx';
+
 
 
 function App() {
@@ -20,19 +23,13 @@ function App() {
     <Header setOpenModal={setOpenModal} setSideBar={setSideBar}/>
     <Nav/>
     <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
-      <form>
-        <h2>Cadastro</h2>
-        <p>Faça já seu login na plataforma.</p>
-        <input type="text" placeholder='Digite seu melhor Email...'/>
-        <input type="text" placeholder='Digite sua melhor senha...'/>
-        <button>Enviar</button>
-        <div>Por favor ler os <span>termos de segurança</span></div>
-      </form>
+      <ModalForm/>
     </Modal>
     <SideBar isOpen={sideBar} setSideBarOpen={() => setSideBar(!sideBar)}/>
     <Carousel/>
     <BestSeller/>
     <Products/>
+    <Infos/>
     </Provider>
   )
 }

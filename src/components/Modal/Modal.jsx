@@ -1,5 +1,6 @@
-import * as M from "./modal.js"
-import { FaTimes } from "react-icons/fa"
+import * as M from "./modal.js";
+import { FaTimes } from "react-icons/fa";
+
 export default function Modal({isOpen, setModalOpen, children}){
 
     if(isOpen){

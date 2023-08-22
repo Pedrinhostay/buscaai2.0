@@ -1,0 +1,40 @@
+
+  
+    .formUser{
+    display: flex;
+    width: 88%;
+    flex-direction: column;
+  }
+  .formUser h2{
+    font-size: 1.7rem;
+  }
+  .formUser p{
+    color: #385170;
+    font-size: 0.8rem;
+  }
+  .formUser input{
+    margin-top: 1.5rem;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px #385170;
+    outline: none;
+  }
+  .formUser button{
+    padding: 10px;
+    background-color: #385170;
+    border: none;
+    margin-top: 1rem;
+    color: #e4e4e4;
+    box-shadow: 0px 0px 3px #000;
+  }
+  .formUser div span{
+    font-size: 1rem;
+    text-decoration: underline;
+    color: #385170;
+    position: relative;
+    margin-left: 3px;
+    right: 0px;
+    top: 0px;
+  }
+  

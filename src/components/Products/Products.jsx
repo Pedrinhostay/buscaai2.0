@@ -10,7 +10,7 @@ export default function Products(){
     const {products, setProducts} =useContext(AppContext);
 
     useEffect( () => {
-        fetchProducts('console').then((res) => {
+        fetchProducts('jogos console').then((res) => {
             setProducts(res);
         })
     }, [])
