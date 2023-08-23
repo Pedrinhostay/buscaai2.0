@@ -13,7 +13,7 @@ export default function Products(){
         fetchProducts('jogos console').then((res) => {
             setProducts(res);
         })
-    }, [])
+    }, [setProducts])
 
     return(
         <>

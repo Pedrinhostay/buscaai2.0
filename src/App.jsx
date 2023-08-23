@@ -12,14 +12,14 @@ import Products from './components/Products/Products.jsx';
 import Provider from './context/Provider.jsx';
 import ModalForm from './components/ModalForm/ModalForm.jsx';
 import Infos from './components/Infos/Infos.jsx';
-
-
+import Social from './components/Sociais/Social.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
   const [sideBar, setSideBar] = useState(false);
   return (
-    <Provider>
+      <Provider>
     <Header setOpenModal={setOpenModal} setSideBar={setSideBar}/>
     <Nav/>
     <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
@@ -30,6 +30,8 @@ function App() {
     <BestSeller/>
     <Products/>
     <Infos/>
+    <Social/>
+    <Footer/>
     </Provider>
   )
 }
